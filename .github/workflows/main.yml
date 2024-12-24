@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '17'  # You can change this based on the Java version you need (17 is chosen as an example)
-          distribution: 'adoptopenjdk'
+          distribution: 'adoptium'  # Updated distribution name
 
       # Step 3: Build the Spring Boot application with Maven
       - name: Build with Maven
@@ -40,6 +40,4 @@ jobs:
             pm2 stop events-microservice || true  # Stops the existing PM2 process if it's running
             pm2 start events-microservice-0.0.1-SNAPSHOT.jar --name "events-microservice" -- -jar events-microservice-0.0.1-SNAPSHOT.jar
             pm2 save  # Save the PM2 process list for future restarts
-      
-
-      
+          EOF
