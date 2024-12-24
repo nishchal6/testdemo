@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '17'  # Use Java 17
-          distribution: 'adoptium'  # Use AdoptOpenJDK's successor 'Adoptium'
+          distribution: 'temurin'  # Use Temurin, the official distribution from Adoptium
 
       # Step 3: Build the Spring Boot application with Maven
       - name: Build with Maven
