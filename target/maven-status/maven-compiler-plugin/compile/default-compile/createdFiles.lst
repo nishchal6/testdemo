@@ -1,0 +1,15 @@
+com/kipper/eventsmicroservice/exceptions/EventNotFoundException.class
+com/kipper/eventsmicroservice/domain/Subscription.class
+com/kipper/eventsmicroservice/dtos/SubscriptionRequestDTO.class
+com/kipper/eventsmicroservice/dtos/EmailRequestDTO.class
+com/kipper/eventsmicroservice/repositories/EventRepository.class
+com/kipper/eventsmicroservice/repositories/SubscriptionRepository.class
+com/kipper/eventsmicroservice/domain/Event.class
+com/kipper/eventsmicroservice/services/EmailServiceClient.class
+com/kipper/eventsmicroservice/infra/RestErrorMessage.class
+com/kipper/eventsmicroservice/services/EventService.class
+com/kipper/eventsmicroservice/infra/RestExceptionHandler.class
+com/kipper/eventsmicroservice/dtos/EventRequestDTO.class
+com/kipper/eventsmicroservice/EventsMicroserviceApplication.class
+com/kipper/eventsmicroservice/exceptions/EventFullException.class
+com/kipper/eventsmicroservice/controllers/EventController.class

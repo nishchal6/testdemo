@@ -1,0 +1,15 @@
+/home/ubuntu/testdemo/src/main/java/com/kipper/eventsmicroservice/infra/RestExceptionHandler.java
+/home/ubuntu/testdemo/src/main/java/com/kipper/eventsmicroservice/repositories/SubscriptionRepository.java
+/home/ubuntu/testdemo/src/main/java/com/kipper/eventsmicroservice/exceptions/EventFullException.java
+/home/ubuntu/testdemo/src/main/java/com/kipper/eventsmicroservice/services/EmailServiceClient.java
+/home/ubuntu/testdemo/src/main/java/com/kipper/eventsmicroservice/dtos/EventRequestDTO.java
+/home/ubuntu/testdemo/src/main/java/com/kipper/eventsmicroservice/dtos/SubscriptionRequestDTO.java
+/home/ubuntu/testdemo/src/main/java/com/kipper/eventsmicroservice/domain/Event.java
+/home/ubuntu/testdemo/src/main/java/com/kipper/eventsmicroservice/controllers/EventController.java
+/home/ubuntu/testdemo/src/main/java/com/kipper/eventsmicroservice/repositories/EventRepository.java
+/home/ubuntu/testdemo/src/main/java/com/kipper/eventsmicroservice/services/EventService.java
+/home/ubuntu/testdemo/src/main/java/com/kipper/eventsmicroservice/EventsMicroserviceApplication.java
+/home/ubuntu/testdemo/src/main/java/com/kipper/eventsmicroservice/dtos/EmailRequestDTO.java
+/home/ubuntu/testdemo/src/main/java/com/kipper/eventsmicroservice/infra/RestErrorMessage.java
+/home/ubuntu/testdemo/src/main/java/com/kipper/eventsmicroservice/exceptions/EventNotFoundException.java
+/home/ubuntu/testdemo/src/main/java/com/kipper/eventsmicroservice/domain/Subscription.java
