@@ -1,0 +1,36 @@
+name: Deploy Spring Boot to Remote Server
+
+on:
+  push:
+    branches:
+      - main  # This workflow runs on push to the main branch (adjust as needed)
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      
+      # Step 1: Checkout the code from GitHub
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Step 2: Build the Spring Boot application with Maven
+      - name: Build with Maven
+        run: mvn clean install -DskipTests  # Skips tests for faster build (remove if you want to run tests)
+
+      # Step 3: Upload the generated .jar file to the server
+      - name: Upload .jar file via SCP
+        run: |
+          scp -o StrictHostKeyChecking=no target/events-microservice-0.0.1-SNAPSHOT.jar user@your-server-ip:/home/ubuntu/app/
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      # Step 4: SSH into the server and start the app with PM2
+      - name: SSH into remote server and start app with PM2
+        run: |
+          ssh -o StrictHostKeyChecking=no user@your-server-ip << 'EOF'
+            cd /home/ubuntu/testdemo
+            pm2 stop events-microservice || true  # Stops the existing PM2 process if it's running
+            pm2 start /home/ubuntu/app/events-microservice-0.0.1-SNAPSHOT.jar --name "events-microservice" -- -jar /home/ubuntu/app/events-microservice-0.0.1-SNAPSHOT.jar
+            pm2 save  # Save the PM2 process list for future restarts
+          EOF
