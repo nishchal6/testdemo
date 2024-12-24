@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '17'  # Use Java 17
-          distribution: 'adoptopenjdk'  # Use AdoptOpenJDK distribution (you can change this if you prefer another JDK)
+          distribution: 'adoptium'  # Use AdoptOpenJDK's successor 'Adoptium'
 
       # Step 3: Build the Spring Boot application with Maven
       - name: Build with Maven
